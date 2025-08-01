@@ -319,9 +319,13 @@
 
         createCodingEffect();
     </script>
-    <audio autoplay loop hidden>
-  <source src="assets/audio/lofi.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-    </audio>
+    <audio id="bgm" src="assets/audio/lofi.mp3" loop></audio>
+<script>
+  document.addEventListener("click", () => {
+    const bgm = document.getElementById("bgm");
+    bgm.play().catch((e) => console.log("Play error:", e));
+  });
+</script>
+    
 </body>
 </html>
